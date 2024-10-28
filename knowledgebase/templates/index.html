@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Base System</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Knowledge  Base</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="search">
+        <div class="container">
+            <input type="text" placeholder="Search articles...">
+            <button type="button">Search</button>
+        </div>
+    </section>
+    
+    <section class="articles">
+        <div class="container">
+            <h2>Recent Articles</h2>
+            <article>
+                <h3>Online Learning Platforms</h3>
+                <p>Online Learning Platforms
+                    Online learning platforms such as Coursera, edX, and Khan Academy have revolutionized education, making high-quality learning resources accessible to a global audience. These platforms have democratized education by providing opportunities to learn from prestigious institutions and experts without geographical constraints.
+                    
+                    Coursera
+                    Coursera partners with top universities and organizations to offer a wide range of courses, specializations, and degrees. Founded by Stanford professors Andrew Ng and Daphne Koller in 2012, Coursera provides learners with access to courses from institutions like Yale, the University of London, and Google.
+                    
+                    Features:
+                    Diverse Course Offerings: From humanities to computer science, Coursera covers various fields.
+                    Specializations and Degrees: Users can pursue certificate programs, professional certificates, and full degree programs.
+                    Flexible Learning: Courses are designed to be completed at your own pace, often with options for part-time or full-time study.
+                    Interactive Elements: Many courses include assignments, peer-reviewed projects, and interactive quizzes.
+                    edX
+                    edX was founded by Harvard University and MIT in 2012 with the goal of increasing access to high-quality education. The platform offers a range of courses from leading universities such as Harvard, MIT, and the University of California, Berkeley.
+                    
+                    Features:
+                    MicroMasters and Professional Certificates: edX provides opportunities for learners to earn credentials that can enhance their careers.
+                    Global University Partnerships: Courses and programs are offered by renowned institutions worldwide.
+                    Auditing Option: Learners can audit many courses for free, gaining access to course materials without a certificate.
+                    Verified Certificates: For a fee, learners can obtain verified certificates that attest to their accomplishments.
+                    Khan Academy
+                    Khan Academy is a nonprofit organization that offers a vast collection of free educational resources for learners of all ages. Founded by Salman Khan in 2008, the platform aims to provide a free, world-class education for anyone, anywhere.
+                    
+                    Features:
+                    K-12 Focus: Khan Academy is well-known for its resources for primary and secondary education, covering subjects from math and science to history and arts.
+                    Interactive Exercises: The platform includes practice exercises, instructional videos, and a personalized learning dashboard.
+                    Teacher and Parent Resources: Tools are available for teachers and parents to track students’ progress and support their learning.
+                    No Cost: All resources are completely free, making high-quality education accessible to all.
+                    Benefits of Online Learning Platforms
+                    Accessibility: Students from any location with an internet connection can access high-quality educational content.
+                    Flexibility: Learners can study at their own pace, fitting education into their personal and professional schedules.
+                    Variety: Platforms offer a diverse range of subjects and courses, catering to different interests and career goals.
+                    Cost-Effectiveness: Many platforms offer free courses or affordable certification options, reducing the cost of education compared to traditional institutions.
+                    Continuous Learning: Online platforms facilitate lifelong learning, enabling users to continually upgrade their skills and knowledge.
+                    Challenges
+                    While online learning platforms provide numerous advantages, they also present certain challenges:
+                    
+                    Self-Discipline Required: Online learning requires a high degree of self-motivation and time management skills.
+                    Limited Interaction: Some learners may miss the face-to-face interaction and immediate feedback provided in traditional classrooms.
+                    Technical Issues: Access to high-speed internet and up-to-date devices is necessary for an optimal learning experience.
+                    Overall, online learning platforms have significantly expanded access to education, offering learners the flexibility to acquire new skills and knowledge at their convenience. They continue to evolve and adapt, integrating advanced technologies and pedagogical strategies to enhance the learning experience.</p>
+                <a href="#">Read more</a>
+            </article>
+            <article>
+                <h3>Interactive Tools</h3>
+                <p>Digital tools such as interactive whiteboards, educational apps, and virtual simulations enhance engagement and understanding. These technologies enable students to visualize complex concepts and participate in interactive activities that traditional methods might not accommodate.
+
+                </p>
+                <a href="#">Read more</a>
+            </article>
+            <article>
+                <h3>Personalized Learning</h3>
+                <p>Artificial Intelligence (AI) and machine learning algorithms are being used to create personalized learning experiences. Adaptive learning systems analyze students' progress and tailor content.
+
+                </p>
+                <a href="#">Read more</a>
+            </article>
+            <!-- More articles can be added here -->
+        </div>
+    </section>
+    
+    <section class="register">
+        <div class="container">
+            <h2>Register</h2>
+            <form action="{% url 'register' %}" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}  <!-- Render form fields with Django's form rendering -->
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Knowledge Base System. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

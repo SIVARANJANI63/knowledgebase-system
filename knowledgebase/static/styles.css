@@ -1,0 +1,168 @@
+/* Reset basic styles and apply a simple layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: red
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header styles */
+header {
+    background: #1984ef2f;
+    color: hsl(133, 79%, 44%);
+    padding: 10px 0;
+    text-align: left;
+}
+
+header h1 {
+    float: left;
+    display: inline;
+}
+
+nav ul {
+    float: right;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: hsl(133, 79%, 44%);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #f4f4f4;
+}
+
+/* Search section styles */
+.search {
+    background: #e2e2e2;
+    padding: 20px;
+    text-align: center;
+}
+
+.search input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    background: blueviolet;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search button:hover {
+    background: #555;
+}
+
+/* Articles section styles */
+.articles {
+    padding: 20px;
+}
+
+.articles h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.articles article {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.articles article h3 {
+    color: #333;
+}
+
+.articles article p {
+    color: #666;
+}
+
+.articles article a {
+    display: block;
+    text-align: right;
+    color: #333;
+    text-decoration: none;
+}
+
+.articles article a:hover {
+    text-decoration: underline;
+}
+
+/* Register section styles */
+.register {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.register h2 {
+    margin-bottom: 20px;
+}
+
+.register form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.register input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register button {
+    padding: 10px;
+    border: none;
+    background: grey;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.register button:hover {
+    background: #555;
+}
+
+/* Footer styles */
+footer {
+    background: #1984ef2f;
+    color: #15be15;
+    text-align: center;
+    padding: 10px 0;
+}

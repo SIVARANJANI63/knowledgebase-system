@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Success</h1>
+    </header>
+
+    <section class="success">
+        <div class="container">
+            <h2>Registration Successful!</h2>
+            <p>You have successfully registered. You can now <a href="{% url 'login' %}">login</a>.</p>
+        </div>
+    </section>
+</body>
+</html>
