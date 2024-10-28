@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image for Django project
-                    bat "docker build -t recipe-app:%BUILD_NUMBER% ."
+                    bat "docker build -t knowledge-based-system-app:%BUILD_NUMBER% ."
                 }
             }
         }
@@ -22,9 +22,9 @@ pipeline {
             steps {
                 script {
                     // Remove existing container if it exists
-                    bat "docker rm -f recipe-app-conntainer || echo 'No existing container to remove.'"
+                    bat "docker rm -f knowledge-based-system-app-conntainer || echo 'No existing container to remove.'"
                     // Run the Docker container with the new image
-                    bat "docker run -d --name recipe-app-container -p 8000:8000 recipe-app:%BUILD_NUMBER%"
+                    bat "docker run -d --name knowledge-based-system-app-container -p 8000:8000 knowledge-based-system-app:%BUILD_NUMBER%"
                 }
             }
         }
